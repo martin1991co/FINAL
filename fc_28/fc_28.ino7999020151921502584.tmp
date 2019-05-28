@@ -1,0 +1,19 @@
+const int sensorPin = A0;
+ 
+void setup() {
+   Serial.begin(9600);
+}
+ 
+void loop() 
+{ 
+  int a;
+   int humedad = analogRead(sensorPin);
+   Serial.print(humedad);
+   a=humedad/1023;
+   if(a < 50)
+   {
+      Serial.println("Encendido");  
+      //hacer las acciones necesarias
+   }
+   delay(1000);
+}
